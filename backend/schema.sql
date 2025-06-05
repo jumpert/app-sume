@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS accounts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  bank VARCHAR(255),
+  currency VARCHAR(3) NOT NULL,
+  balance DECIMAL(12,2) DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS categories (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS transactions (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  account_id INT NOT NULL,
+  category_id INT,
+  amount DECIMAL(12,2) NOT NULL,
+  type ENUM('INGRESO', 'EGRESO') NOT NULL,
+  description TEXT,
+  date DATETIME NOT NULL,
+  FOREIGN KEY (account_id) REFERENCES accounts(id),
+  FOREIGN KEY (category_id) REFERENCES categories(id)
+);

@@ -24,3 +24,23 @@ cd backend
 npm install
 npm start
 ```
+
+El backend expone endpoints REST sencillos para gestionar cuentas y
+transacciones. Algunos ejemplos:
+
+```bash
+GET  /accounts          # lista de cuentas
+POST /accounts          # crea una cuenta
+GET  /transactions      # movimientos registrados
+POST /transactions      # registra un ingreso o egreso
+```
+
+Para conectarse a la base de datos es posible definir las siguientes
+variables de entorno en un archivo `.env`:
+
+```
+DB_HOST=localhost
+DB_USER=sume
+DB_PASS=password
+DB_NAME=sume
+```

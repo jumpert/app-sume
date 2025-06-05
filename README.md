@@ -1,1 +1,26 @@
-# app-sume
+# Sistema Unificado de Movimientos y Egresos (SUME)
+
+SUME es un sistema integral para gestionar las finanzas personales o familiares. 
+Permite manejar diversas cuentas bancarias o ficticias, registrar ingresos y egresos 
+fijos o variables, realizar transferencias entre cuentas propias o de otros 
+miembros del grupo familiar y obtener reportes estadísticos.
+
+El sistema está pensado como una aplicación web *mobile first* alojada en la nube. 
+Enviará notificaciones de vencimientos o fechas de pago y mostrará gráficos y 
+estadísticas para visualizar el comportamiento financiero en distintos rubros.
+
+Tecnologías previstas:
+- **Frontend**: Angular 19
+- **Backend**: Node.js 22
+- **Base de datos**: MySQL
+
+## Estructura del proyecto
+- `backend/` – código fuente del servidor Node.js.
+- `frontend/` – (pendiente) aplicación Angular.
+
+## Uso básico del backend
+```bash
+cd backend
+npm install
+npm start
+```

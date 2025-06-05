@@ -1,0 +1,13 @@
+{
+  "name": "sume-backend",
+  "version": "0.1.0",
+  "description": "Sistema Unificado de Movimientos y Egresos backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.9.2"
+  }
+}
